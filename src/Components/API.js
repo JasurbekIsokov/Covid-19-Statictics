@@ -7,7 +7,20 @@ const getRegionsList = (path) => {
       "X-RapidAPI-Host": "covid-19-statistics.p.rapidapi.com",
     },
   });
+
   return data;
 };
 
-export { getRegionsList };
+const getProvincesList = (path, id) => {
+  const data = axios.get(`https://covid-19-statistics.p.rapidapi.com/${path}`, {
+    params: { iso: { id } },
+    headers: {
+      "X-RapidAPI-Key": "aa5d36d25cmsh7dc2b96a05ea077p1a5d0cjsn3c865bab7003",
+      "X-RapidAPI-Host": "covid-19-statistics.p.rapidapi.com",
+    },
+  });
+
+  return dataProvinces;
+};
+
+export { getRegionsList, getProvincesList };
