@@ -1,9 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
 .main {
   margin-top: -1.8%;
   width: 100%;
-  height: 100vh;
+  height: 97vh;
   background-color: #f0f0f0;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   padding: 15%;
@@ -38,4 +41,28 @@
 
 .come:active {
   transform: scale(1.02);
+}
+
+/* Header */
+
+.header {
+  position: fixed;
+  width: 100vw;
+  height: 80px;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  background-color: rgba(0, 68, 255, 0.9);
+  box-shadow: 0 3px 6px black;
+}
+
+/* Footer */
+
+.footer {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 68, 255, 0.9);
 }

@@ -6,6 +6,7 @@ const REPORTS = "getReports";
 const TOTALREPORT = "getTotalReport";
 const SELECT_REGION = "selectRegion";
 
+// Regionlarni olib keladigan action
 const getRegionsAction = () => async (dispatch, getState) => {
   const data = await getRegionsList("regions");
   dispatch({
@@ -21,13 +22,17 @@ const selectRegionsAction = (id) => {
   };
 };
 
+// Provinsiyalarni olib keladigan action
 const getProvincesAction = (regionsId) => async (dispatch, getState) => {
-  const provinces = await getProvincesList(`provinces`, regionsId);
+  const provinces = await getProvincesList(regionsId);
+  console.log(provinces);
   dispatch({
     type: PROVINCES,
     payload: provinces.data,
   });
 };
+
+// endi  provinsiyalarni olib keladian container qilaman
 
 const getReportsAction = () => {
   return {

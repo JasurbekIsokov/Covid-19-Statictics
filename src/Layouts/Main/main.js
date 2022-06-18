@@ -13,7 +13,15 @@ const main = (props) => {
     return props.regions[0]?.data.data.map((val) => {
       console.log(val);
       return (
-        <div id={val.iso} key={val.iso}>
+        <div
+          style={{ border: "1px solid #000" }}
+          id={val.iso}
+          key={val.iso}
+          onClick={() => {
+            props.selectRegionsAction(val.iso);
+            props.getProvincesAction();
+          }}
+        >
           <h2>{val.name}</h2>
           <h3>{val.iso}</h3>
         </div>
