@@ -1,33 +1,37 @@
+import { getRegionsList } from "../../Components/API.js";
+
 const REGIONS = "getRegions";
 const PROVINCES = "getProvinces";
 const REPORTS = "getReports";
 const TOTALREPORT = "getTotalReport";
 
-const getRegionsAction = () => {
-  return {
+const getRegionsAction = () => async (dispatch, getState) => {
+  const data = await getRegionsList("regions");
+  console.log(data);
+  dispatch({
     type: REGIONS,
     payload: data,
-  };
+  });
 };
 
 const getProvincesAction = () => {
   return {
     type: PROVINCES,
-    payload: id,
+    // payload: id,
   };
 };
 
 const getReportsAction = () => {
   return {
     type: REPORTS,
-    payload: data,
+    // payload: data,
   };
 };
 
 const getTotalReportAction = () => {
   return {
     type: TOTALREPORT,
-    payload: data,
+    // payload: data,
   };
 };
 

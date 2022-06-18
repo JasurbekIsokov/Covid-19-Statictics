@@ -1,4 +1,4 @@
-import { PROVINCES, REGIONS } from "../Actions/Actions";
+import { PROVINCES, REGIONS } from "../Actions/actions.js";
 
 export const initialState = {
   regions: [],
