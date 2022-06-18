@@ -68,3 +68,21 @@
   color: #fff;
   background-color: rgba(0, 68, 255, 0.9);
 }
+
+.main2 {
+  width: 25%;
+  padding-top: 60px;
+  background-color: rgba(0, 0, 0, 0.836);
+  color: #fff;
+}
+
+.regions {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10%;
+  cursor: pointer;
+}
+
+.regions:hover {
+  background-color: rgba(0, 2, 10, 0.83);
+}

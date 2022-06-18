@@ -7,6 +7,8 @@ const main = (props) => {
 
   const test = props.regions.length ? "none" : "block";
 
+  const cl = props.regions.length ? "main2" : "";
+
   const renderRegionListHtml = () => {
     if (!props.regions.length) return;
 
@@ -14,7 +16,7 @@ const main = (props) => {
       console.log(val);
       return (
         <div
-          style={{ border: "1px solid #000" }}
+          className="regions"
           id={val.iso}
           key={val.iso}
           onClick={() => {
@@ -22,8 +24,7 @@ const main = (props) => {
             props.getProvincesAction();
           }}
         >
-          <h2>{val.name}</h2>
-          <h3>{val.iso}</h3>
+          <h3>{val.name}</h3>
         </div>
       );
     });
@@ -45,7 +46,7 @@ const main = (props) => {
           Come in
         </button>
       </div>
-      {renderRegionListHtml()}
+      <div className={cl}>{renderRegionListHtml()}</div>
     </>
   );
 };
