@@ -1,6 +1,11 @@
 import { PROVINCES, REGIONS } from "../Actions/Actions";
 
-const initialState = { regions: [], id: null, provinces: [], reports: [] };
+export const initialState = {
+  regions: [],
+  id: null,
+  provinces: [],
+  reports: [],
+};
 
 const Reducers = (state = initialState, action) => {
   if (action.type === REGIONS) {
