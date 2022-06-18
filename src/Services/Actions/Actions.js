@@ -7,7 +7,6 @@ const TOTALREPORT = "getTotalReport";
 
 const getRegionsAction = () => async (dispatch, getState) => {
   const data = await getRegionsList("regions");
-  console.log(data);
   dispatch({
     type: REGIONS,
     payload: data,

@@ -3,7 +3,12 @@ import React from "react";
 /* sytga kirilganda ochiladigan page */
 
 const main = (props) => {
-  console.log(props);
+  let a = { ...props.regions[0]?.data.data };
+  // console.log(props.regions[0]?.data);
+  console.log(a);
+  props.regions[0]?.data.data.map((val) => {
+    console.log(val);
+  });
 
   return (
     <>
