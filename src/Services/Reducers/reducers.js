@@ -17,8 +17,11 @@ const Reducers = (state = initialState, action) => {
   }
 
   if (action.type === PROVINCES) {
+    state.provinces = [];
     return {
-      ...state,
+      regions: state.regions,
+      id: state.id,
+      reports: state.reports,
       provinces: action.payload,
     };
   }

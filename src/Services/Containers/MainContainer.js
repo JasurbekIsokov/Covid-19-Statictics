@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 
-import main from "../../Layouts/Main/main.js";
+import Main from "../../Layouts/Main/main.js";
 import {
   getRegionsAction,
   getProvincesAction,
@@ -17,4 +17,4 @@ export const MainContainer = connect(getMyState, {
   getReportsAction,
   getProvincesAction,
   selectRegionsAction,
-})(main);
+})(Main);

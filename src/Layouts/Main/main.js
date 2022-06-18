@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { getProvincesList } from "../../Components/API";
 
 /* saytga kirilganda ochiladigan page */
 
-const main = (props) => {
+const Main = (props) => {
   // props bu yerda davlatlarni olib keladigan obect
 
   const test = props.regions.length ? "none" : "block";
@@ -25,7 +26,7 @@ const main = (props) => {
           id={val.iso}
           key={val.iso}
           onClick={() => {
-            props.selectRegionsAction(val.iso);
+            // props.selectRegionsAction(val.iso);
             props.getProvincesAction(val.iso);
           }}
         >
@@ -37,17 +38,12 @@ const main = (props) => {
 
   const renderProvincesList = () => {
     if (!props.provinces) return;
-
-    console.log(props.provinces.data);
-
-    return props.provinces?.data?.map((val) => {
-      return (
-        <div className="provinsiyalar" id={val.lat} key={val.iso}>
-          <h3>{val.province}</h3>
-          <h2>{val.name}</h2>
-        </div>
-      );
-    });
+    return props.provinces?.data?.map((val) => (
+      <div className="provinsiyalar" id={val.lat} key={val.iso}>
+        <h3>{val.province}</h3>
+        <h2>{val.name}</h2>
+      </div>
+    ));
   };
 
   return (
@@ -71,7 +67,7 @@ const main = (props) => {
           <h2 style={{ display: test2 }} className="regions_title">
             Regions
           </h2>
-          <div className={test3}> {renderRegionListHtml()}</div>
+          <div className={test3}>{renderRegionListHtml()}</div>
         </div>
         <div className={cl2}>
           <h2 style={{ display: testProvinces }} className="regions_title">
@@ -85,4 +81,4 @@ const main = (props) => {
   );
 };
 
-export default main;
+export default Main;

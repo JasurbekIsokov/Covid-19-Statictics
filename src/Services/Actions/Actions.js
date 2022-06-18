@@ -25,7 +25,6 @@ const selectRegionsAction = (id) => {
 // Provinsiyalarni olib keladigan action
 const getProvincesAction = (regionsId) => async (dispatch, getState) => {
   const provinces = await getProvincesList(regionsId);
-  // console.log(provinces.data.data);
   dispatch({
     type: PROVINCES,
     payload: provinces.data,
