@@ -6,6 +6,7 @@ const main = (props) => {
   // props bu yerda davlatlarni olib keladigan obect
 
   const test = props.regions.length ? "none" : "block";
+  const test2 = props.regions.length ? "block" : "none";
 
   const cl = props.regions.length ? "main2" : "";
 
@@ -46,7 +47,12 @@ const main = (props) => {
           Come in
         </button>
       </div>
-      <div className={cl}>{renderRegionListHtml()}</div>
+      <div className={cl}>
+        <h2 style={{ display: test2 }} className="regions_title">
+          Regions
+        </h2>
+        <div className="render_region"> {renderRegionListHtml()}</div>
+      </div>
     </>
   );
 };
