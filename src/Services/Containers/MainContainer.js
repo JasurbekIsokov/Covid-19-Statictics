@@ -14,7 +14,7 @@ const getMyState = (state) => {
 
 export const MainContainer = connect(getMyState, {
   getRegionsAction,
-  getProvincesAction,
   getReportsAction,
+  getProvincesAction,
   selectRegionsAction,
 })(main);

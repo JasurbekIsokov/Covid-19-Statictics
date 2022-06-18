@@ -70,25 +70,26 @@
 }
 
 .main2 {
-  width: 25%;
   padding-top: 60px;
-  background-color: rgba(0, 0, 0, 0.836);
+  background-color: rgb(1, 24, 37);
   color: #fff;
 }
 
-.regions {
+.regions,
+.provinsiyalar {
   display: flex;
   justify-content: space-between;
   padding-left: 10%;
   cursor: pointer;
 }
 
-.regions:hover {
+.regions:hover,
+.provinsiyalar:hover {
   background-color: rgba(0, 2, 10, 0.83);
 }
 
 .regions_title {
-  width: 25%;
+  width: 20%;
   color: #fff;
   background-color: rgb(0, 68, 255);
   padding: 10px;
@@ -97,5 +98,20 @@
 }
 
 .render_region {
+  height: 90vh;
   padding-top: 70px;
+  overflow: auto;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+.render_province-list {
+  border-left: 2px solid blue;
+  padding-top: 60px;
+  background-color: rgba(0, 0, 0, 0.836);
+  color: #fff;
+  overflow: auto;
 }
